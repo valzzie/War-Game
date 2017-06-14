@@ -1,55 +1,54 @@
 
-
-
 var myGame = new Game();
-console.log(myGame);
+
 $(document).ready(function(){
+
+  $('.startbutton').click(function(){
   myGame.shuffleTheDeck();//invokes the function startGame from simon.js
-  myGame.drawTheCard();
-  $('.humanCard').onClick(function() {
-    $('.humansnumber').html('drawnCard');//populates the humans Card
-    $('.martiansnumber').html('drawnCard');//populates the martians card
-})
+  });
+});
+  $('.nextcardbutton').click(function(){
+    myGame.drawTheCard();
+    // populateCard();
+    // seetheCard();
+//     determineTheScore();
+//     updatetheScore();
+//     fliptheCard();
+//       if(this.humanrandomDeck.length > 0){//>0 not working
+//         drawTheCard();
+//         populateTheCard();
+//         seetheCard();
+//         determineTheScore();
+//         updatetheScore();
+//         fliptheCard();
+// }
+// else{
+//   determineTheWinner();
+// }
 });
 
-//Random
-// var myGame = new SimonGame();
-// console.log(myGame);
-// $(document).ready(function(){
-//   myGame.startGame();//invokes the function startGame from simon.js
-// });
-// $('.martiansnumber').html('drawnCard');
-// $('.humanssnumber').html('drawnCard');
+function populateCard() {
+  $('#martiansdrawcard').html('this.martiandrawnCard');//populates the humans Card
+  $('#humansdrawcard').html('this.humandrawnCard');//populates the martians card
+}
 
-//Simon Game Below
-// $(document).ready(function(){
-//   //what is going to be clicked and what happens when clicked
-//   $('button').click(function(){
-//     var colorJustClicked = $(this).prop('id');
-//     var currentSequenceColor= myGame.sequence[myGame.userClickCount];
-//     if (currentSequenceColor === colorJustClicked){
-//       //sequence is correct so far
-//
-//       //want to increase user click count if previous one was correct.
-//       myGame.userClickCount +=1;
-//       if(myGame.userClickCount >= myGame.sequence.length){
-//         //alert('Yeah, Sequence is Correct!');
-//         //code to go to next round
-//         $('body').addClass('sequence-entered');
-//         setTimeout(function(){
-//           $('body').removeClass('sequence-entered');
-//         },1000);
-//         myGame.nextRound();
-//       }
-//     }
-//     else{
-//       //game over- sequence not correct.
-//       $('body').addClass('game-ended');
-//       setTimeout(function(){
-//         $('body').removeClass('game-ended');
-//       myGame.gameOver();
-//     }, 10000);
-//   }
-//
-//   });
-// });
+function seetheCard() {
+  $(".martiancard").css('background-image', 'none');
+  $(".martiancard").css({ 'background-color': 'white' });
+  $(".humancard").css('background-image', 'none');
+  $(".humancard").css({ 'background-color': 'white' });
+}
+function updatetheScore() {
+  $('.martianscore').html('this.martianScore');
+  $('.humanscore').html('this.humanScore');
+}
+function fliptheCard() {
+  $(".martiancard").css({ 'background-color': 'none' });
+  $(".martiancard").css('background-image', 'url("../images/Swampler by Katarzyna Zalecka.jpg")');
+  $(".humancard").css({ 'background-color': 'none' });
+  $(".humancard").css('background-image', 'url("../images/Swampler by Katarzyna Zalecka.jpg")');
+}
+function updateTheWinner() {//work in progress
+  $('#martiansdrawcard').html('this.martiandrawnCard');//populates the humans Card
+  $('#humansdrawcard').html('this.humandrawnCard');//populates the martians card
+}

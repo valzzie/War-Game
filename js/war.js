@@ -19,42 +19,41 @@ function Game () {
 
           this.humanrandomDeck.push(this.deck[(randomNum1)]);
           this.martianrandomDeck.push(this.deck[(randomNum2)]);
-          this.drawTheCard();
             }
 
           }
           //Successful Test
-        //  console.log("humanrandom deck:",this.humanrandomDeck);
-          //console.log("martianrandom deck:",this.martianrandomDeck);
+         console.log("humanrandom deck:",this.humanrandomDeck);
+          console.log("martianrandom deck:",this.martianrandomDeck);
         //  console.log("deck",this.deck);
       };
 
 
       this.drawTheCard = function(){
-console.log("We are in the drawTheCard");
+      console.log("We are in the drawTheCard");
 
-        if(this.humanrandomDeck.length > 0){//>0 not working
-          console.log("drawTheCard function");
+        // if(this.humanrandomDeck.length > 0){//>0 not working
+        //   console.log("drawTheCard function");
         this.humandrawnCard= this.humanrandomDeck.splice(0,1);
         this.martiandrawnCard= this.martianrandomDeck.splice(0,1);
         //this.determineTheScore();
-      }else{
-        //this.determineTheWinner();
-        console.log("determineTheWinner inside of drawTheCard");
-      }
+      // };
+      // else{
+      //   this.determineTheWinner();
+      // }
       //Successful Test
-      // console.log("humandrawnCard: ",this.humandrawnCard);//0
-      // console.log("martiandrawnCard: ", this.martiandrawnCard);//0
-          };
+      console.log("humandrawnCard: ",this.humandrawnCard);//0
+      console.log("martiandrawnCard: ", this.martiandrawnCard);//0
+    };
 
       this.determineTheScore = function(){
       console.log("We are in the determineTheScore");
         if(this.martiandrawnCard[0]>this.humandrawnCard[0]){
           this.martianScore+=1;
-          this.drawTheCard();
+          //this.drawTheCard();
       }else if(this.humandrawnCard[0]>this.martiandrawnCard[0]){
       this.humanScore+=1;
-       this.drawTheCard();
+       //this.drawTheCard();
     }
     //Succeful Test
     // console.log("humandrawnCard: ",this.humandrawnCard);//0
@@ -66,11 +65,11 @@ console.log("We are in the drawTheCard");
         this.determineTheWinner= function(){
 console.log("We are in the determineTheWinner inside determineTheWinner");
           if(this.martianScore> this.humanScore){
-            console.log("The Martians have won");
+            console.log("ALERT!!!!: Martians Have Won! Life as you know it is Over!");
           }else if(this.humanScore> this.martianScore){
-            console.log("The Humans have won");
+            console.log("ALERT!!!!: Humans Have Won! You are safe until next time.");
           }else{
-            console.log("Its a tie");
+            console.log("ALERT!!!!: Its a Tied! You are safe until next time.");
           }
         };
         //Testing the whole run through
@@ -89,6 +88,6 @@ console.log("We are in the determineTheWinner inside determineTheWinner");
         // console.log("humanscore:", this.humanScore);
       }
 
-      var myGame = new Game();
-      myGame.shuffleTheDeck();
-    //  myGame.drawTheCard();
+      // var myGame = new Game();
+      // myGame.shuffleTheDeck();
+    // myGame.drawTheCard();

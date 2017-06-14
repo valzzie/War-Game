@@ -46,33 +46,36 @@ h3{
   height: 300px;
   background-image: url("../images/Swampler by Katarzyna Zalecka.jpg");
   background-size: 119%;
+  /*visibility:visible;*/
 }
-/*doesn't work*/
-/*.score{
-  color: white;
-}*/
 
 .humancard{
   margin-top: 14px;
   height: 300px;
   background-image: url("../images/Swampler by Katarzyna Zalecka.jpg");
   background-size: 119%;
+  /*visibility:visible;*/
 }
 .startcontainer{
   position: absolute;
       width: 182px;
       /*background-color: black;*/
+      /*height: 53px;
+      bottom: 258px;
+      left: 622px;*/
       height: 53px;
-      bottom: -2px;
-      left: 622px;
+      bottom: 854px;
+      left: 402px;
 }
 .startbutton{
   position: absolute;
-width: 182px;
-background-color: black;
-height: 53px;
-bottom: -2px;
-left: 2px;
+      width: 182px;
+      background-color: black;
+      height: 53px;
+      left: 2px;
+      bottom: 20px;
+      right: 163px;
+      border: 1px solid white;
 
 .start{
   color: red;
@@ -89,12 +92,28 @@ left: 2px;
 }
 .nextcardbutton{
     position: absolute;
-    background-color: gray;
+    background-color: lightblue;
     right: 209px;
-    bottom: -230px;
+    bottom: 630px;
     width: 100px;
 }
 .winnerloser{
   border: 1px solid white;
   visibility: visible;
+  border: 1px solid white;
+    visibility: hidden;//needs to be hidden at first.
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    left: 415px;
+    top: 381px;
+}
+#winnerloser{
+  text-align: center;
+}
+.martianscore{
+  color:white;
+}
+.humanscore{
+color:white;
 }
