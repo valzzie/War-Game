@@ -29,22 +29,36 @@ function Game () {
       };
 
 
-      this.drawTheCard = function(){
+      this.drawTheHumanCard = function(){
       console.log("We are in the drawTheCard");
 
         // if(this.humanrandomDeck.length > 0){//>0 not working
         //   console.log("drawTheCard function");
         this.humandrawnCard= this.humanrandomDeck.splice(0,1);
-        this.martiandrawnCard= this.martianrandomDeck.splice(0,1);
         //this.determineTheScore();
       // };
       // else{
       //   this.determineTheWinner();
       // }
       //Successful Test
-      console.log("humandrawnCard: ",this.humandrawnCard);//0
-      console.log("martiandrawnCard: ", this.martiandrawnCard);//0
+      return "humandrawnCard: " + this.humandrawnCard;//0
+       ///0
     };
+    this.drawTheMartianCard = function(){
+    console.log("We are in the drawTheCard");
+
+      // if(this.humanrandomDeck.length > 0){//>0 not working
+      //   console.log("drawTheCard function");
+      this.martiandrawnCard= this.martianrandomDeck.splice(0,1);
+      //this.determineTheScore();
+    // };
+    // else{
+    //   this.determineTheWinner();
+    // }
+    //Successful Test
+    return "martiandrawnCard: " + this.martiandrawnCard;//0
+     ///0
+  };
 
       this.determineTheScore = function(){
       console.log("We are in the determineTheScore");
@@ -58,8 +72,8 @@ function Game () {
     //Succeful Test
     // console.log("humandrawnCard: ",this.humandrawnCard);//0
     // console.log("martiandrawnCard: ", this.martiandrawnCard);//0
-    // console.log("martianscore:", this.martianScore);
-    // console.log("humanscore:", this.humanScore);
+    console.log("martianscore:", this.martianScore);
+    console.log("humanscore:", this.humanScore);
         };
 
         this.determineTheWinner= function(){
@@ -67,17 +81,18 @@ function Game () {
         console.log("We are in the determineTheWinner inside determineTheWinner");
           if(this.martianScore> this.humanScore){
             winner= "Martians have Won! Humans, life as you know it is over!";
-            console.log(winner);
+
             //console.log("Martians Have Won! Humans, life as you know it is over!");
           }else if(this.humanScore> this.martianScore){
             winner= "ALERT!!!!: Humans Have Won! You are safe. For now...";
-            console.log(winner);
+
             //console.log("ALERT!!!!: Humans Have Won! You are safe. For now...");
           }else{
             winner= "Its a Tie! Humans. You are safe until next time...";
-            console.log(winner);
+
             //console.log("Its a Tie! Humans.  You are safe until next time...");
           }
+          return winner;
         };
         //Testing the whole run through
         //  console.log("humanrandom deck:",this.humanrandomDeck);
