@@ -63,13 +63,20 @@ function Game () {
         };
 
         this.determineTheWinner= function(){
-console.log("We are in the determineTheWinner inside determineTheWinner");
+          var winner;
+        console.log("We are in the determineTheWinner inside determineTheWinner");
           if(this.martianScore> this.humanScore){
-            console.log("ALERT!!!!: Martians Have Won! Life as you know it is Over!");
+            winner= "Martians have Won! Humans, life as you know it is over!";
+            console.log(winner);
+            //console.log("Martians Have Won! Humans, life as you know it is over!");
           }else if(this.humanScore> this.martianScore){
-            console.log("ALERT!!!!: Humans Have Won! You are safe until next time.");
+            winner= "ALERT!!!!: Humans Have Won! You are safe. For now...";
+            console.log(winner);
+            //console.log("ALERT!!!!: Humans Have Won! You are safe. For now...");
           }else{
-            console.log("ALERT!!!!: Its a Tied! You are safe until next time.");
+            winner= "Its a Tie! Humans. You are safe until next time...";
+            console.log(winner);
+            //console.log("Its a Tie! Humans.  You are safe until next time...");
           }
         };
         //Testing the whole run through

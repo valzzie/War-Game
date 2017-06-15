@@ -64,8 +64,8 @@ h3{
       bottom: 258px;
       left: 622px;*/
       height: 53px;
-      bottom: 854px;
-      left: 402px;
+      bottom: 273px;
+      left: 631px;
 }
 .startbutton{
   position: absolute;
@@ -93,23 +93,23 @@ h3{
 .nextcardbutton{
     position: absolute;
     background-color: lightblue;
-    right: 209px;
-    bottom: 630px;
-    width: 100px;
+    right: 177px;
+    bottom: 28px;
+    width: 161px;
 }
 .winnerloser{
-  border: 1px solid white;
-  visibility: visible;
-  border: 1px solid white;
-    visibility: hidden;//needs to be hidden at first.
-    width: 150px;
-    height: 200px;
+  visibility: hidden;
+  /*border: 1px solid black;*/
+    width: 520px;
+    height: 400px;
     position: absolute;
-    left: 415px;
-    top: 381px;
+    left: 468px;
+    top: 156px;
+    background-color: red;
 }
 #winnerloser{
   text-align: center;
+  color: black;
 }
 .martianscore{
   color:white;

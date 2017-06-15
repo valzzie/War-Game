@@ -9,21 +9,23 @@ $(document).ready(function(){
 });
   $('.nextcardbutton').click(function(){
     myGame.drawTheCard();
-    // populateCard();
-    // seetheCard();
-//     determineTheScore();
+
+    seetheCard();
+    //  populateCard();
+//     this.determineTheScore();
 //     updatetheScore();
 //     fliptheCard();
-//       if(this.humanrandomDeck.length > 0){//>0 not working
-//         drawTheCard();
+//       if(this.humanrandomDeck.length > 0){
+//         myGame.drawTheCard();
 //         populateTheCard();
 //         seetheCard();
-//         determineTheScore();
+//         this.determineTheScore();
 //         updatetheScore();
 //         fliptheCard();
 // }
 // else{
-//   determineTheWinner();
+//        this.determineTheWinner();
+          //updateTheWinner();
 // }
 });
 
@@ -34,7 +36,7 @@ function populateCard() {
 
 function seetheCard() {
   $(".martiancard").css('background-image', 'none');
-  $(".martiancard").css({ 'background-color': 'white' });
+  $(".martiancard").css({'background-color': 'white' });
   $(".humancard").css('background-image', 'none');
   $(".humancard").css({ 'background-color': 'white' });
 }
@@ -49,6 +51,6 @@ function fliptheCard() {
   $(".humancard").css('background-image', 'url("../images/Swampler by Katarzyna Zalecka.jpg")');
 }
 function updateTheWinner() {//work in progress
-  $('#martiansdrawcard').html('this.martiandrawnCard');//populates the humans Card
-  $('#humansdrawcard').html('this.humandrawnCard');//populates the martians card
+  $('#winnerloser').html('winner');//populates the humans Card
+  $('#winnerloser').html('winner');//populates the martians card
 }
