@@ -38,8 +38,10 @@ $(document).ready(function(){
 //functions referred to above are below.
 function seetheCard() {
   // console.log('FRONT CARD');
+  $(".martiancard").css({border: '1px solid #777'});
   $(".martiancard").css('background-image', 'none');
   $(".martiancard").css({'background-image' : 'url("./images/giphy (6).gif")'});
+  $(".humancard").css({border: '1px solid #777'});
   $(".humancard").css('background-image', 'none');
   $(".humancard").css({'background-image' : 'url("./images/giphy (6).gif")'});
 }
@@ -54,6 +56,8 @@ function fliptheCard() {
 // EMPTY the number
     $('#martiansdrawcard').html(" ");
     $('#humansdrawcard').html(" ");
+    $(".humancard").css({border: 'none'});
+    $(".martiancard").css({border: 'none'});
 //flips the card back to the front of deck.
     $(".martiancard").css({ 'background-color': 'none' });
     $('.martiancard').css({'background-image' : 'url("./images/Swampler by Katarzyna Zalecka.jpg")'});
