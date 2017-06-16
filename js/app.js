@@ -3,7 +3,14 @@ var myGame = new Game();
 
 $(document).ready(function(){
 
+  $('.nextcardbutton').hide();
+
   $('.startbutton').click(function(){
+  $(".winnerloser").css("visibility","hidden");
+  myGame = new Game();
+  updatetheScore();
+  $(this).hide();
+  $('.nextcardbutton').show();
   myGame.shuffleTheDeck();//invokes the function startGame from simon.js
   });
 
@@ -13,6 +20,7 @@ $(document).ready(function(){
     //draws the card and populates it in one step below.
     $('#martiansdrawcard').html(myGame.drawTheMartianCard());
     $('#humansdrawcard').html(myGame.drawTheHumanCard());
+
     // myGame.determineTheMartianScore();
     // myGame.determineTheHumanScore();
       updatetheScore();
@@ -21,11 +29,13 @@ $(document).ready(function(){
         fliptheCard();
       }, 1000);
       //I'm not saying this correctly. How do i get the length of an array?  Look it up.
-   if(this.humanrandomDeck.length <= 0){
-//        myGame.determineTheWinner();
-          //updateTheWinner();
-          //showTheWinner;
-        }
+   if(myGame.humanrandomDeck.length <= 0){
+   myGame.determineTheWinner();
+          updateTheWinner();
+          showTheWinner();
+          $(".startbutton").show();
+          $(".nextcardbutton").hide();
+      }
 });
 });
 //don't need this function since incorporated it to draw and pop card in one step in jquery above.
@@ -38,9 +48,12 @@ $(document).ready(function(){
 function seetheCard() {
   // console.log('FRONT CARD');
   $(".martiancard").css('background-image', 'none');
-  $(".martiancard").css({'background-color': 'white' });
+  $(".martiancard").css({'background-image' : 'url("./images/giphy (6).gif")'});
+  //$(".martiancard").css({'background-color': '#054F81' });
+
   $(".humancard").css('background-image', 'none');
-  $(".humancard").css({ 'background-color': 'white' });
+  //$(".humancard").css({ 'background-color': '#054F81' });
+  $(".humancard").css({'background-image' : 'url("./images/giphy (6).gif")'});
 }
 function updatetheScore() {
   //can't see the martianScore/humanScore because of the scope of the variable inside the function
@@ -81,9 +94,10 @@ function fliptheCard() {
 }
 //populates the text depending on whose score is higher.
 function updateTheWinner(){
-  $('#winnerloser').html(winner);
-  $('#winnerloser').html(winner);
+
+  $('#winnerloser').html(myGame.determineTheWinner());
+  //$('#winnerloser').html(winner);
 }
 function showTheWinner() {//shows the div.
-  $(".winnerloser").toggleClass("visible");
+  $(".winnerloser").css("visibility","visible");
 }

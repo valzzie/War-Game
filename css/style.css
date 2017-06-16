@@ -106,14 +106,32 @@ h3{
     left: 468px;
     top: 156px;
     background-color: red;
+    font-size: 39px;
 }
 #winnerloser{
   text-align: center;
   color: black;
+  font-family:fantasy;
 }
 .martianscore{
   color:white;
 }
 .humanscore{
 color:white;
+}
+#martiansdrawcard{
+  font-family: fantasy;
+    color: grey;
+    font-size: 133px;
+    position: absolute;
+    left: 56px;
+    bottom: -254px;
+}
+#humansdrawcard{
+  font-family: fantasy;
+    color: grey;
+    font-size: 133px;
+    position: absolute;
+    right: 63px;
+    bottom: -249px;
 }

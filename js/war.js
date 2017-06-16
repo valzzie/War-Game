@@ -45,7 +45,7 @@ function Game () {
       //Successful Test
 
       console.log(this.humandrawnCard);
-      return "humandrawnCard: " + this.humandrawnCard;//0
+      return this.humandrawnCard;//0
        ///0
     };
     this.drawTheMartianCard = function(){
@@ -62,7 +62,7 @@ function Game () {
     // }
     //Successful Test
     console.log(this.martiandrawnCard);
-    return "martiandrawnCard: " +this.martiandrawnCard;//0
+    return this.martiandrawnCard;//0
      ///0
   };
 
@@ -111,18 +111,18 @@ function Game () {
 
         this.determineTheWinner= function(){
           var winner;
-        console.log("We are in the determineTheWinner inside determineTheWinner");
+        console.log("We are in the determineTheWinner");
           if(this.martianScore> this.humanScore){
             winner= "Martians have Won! Humans, life as you know it is over!";
-
+console.log("Martians have Won! Humans, life as you know it is over!");
             //console.log("Martians Have Won! Humans, life as you know it is over!");
           }else if(this.humanScore> this.martianScore){
             winner= "ALERT!!!!: Humans Have Won! You are safe. For now...";
-
+console.log("ALERT!!!!: Humans Have Won! You are safe. For now...");
             //console.log("ALERT!!!!: Humans Have Won! You are safe. For now...");
           }else{
             winner= "Its a Tie! Humans. You are safe until next time...";
-
+console.log("Its a Tie! Humans. You are safe until next time...");
             //console.log("Its a Tie! Humans.  You are safe until next time...");
           }
           return winner;
