@@ -58,58 +58,51 @@ h3{
 }
 .startcontainer{
   position: absolute;
-      width: 182px;
-      /*background-color: black;*/
-      /*height: 53px;
-      bottom: 258px;
-      left: 622px;*/
-      height: 53px;
-      bottom: 273px;
-      left: 631px;
+    width: 182px;
+    /* background-color: black; */
+    height: 53px;
+    bottom: 169px;
+    right: 45%;
+    border: 1px solid black;
 }
 .startbutton{
-  position: absolute;
-      width: 182px;
-      background-color: black;
-      height: 53px;
-      left: 2px;
-      bottom: 20px;
-      right: 163px;
-      border: 1px solid white;
-
+    width: 182px;
+    background-color: black;
+    height: 53px;
+    bottom: -125px;
+    border: 1px solid white;
+}
 .start{
   color: red;
     font-family: serif;
 }
-/*.nextcardcontainer{
+.nextcardcontainer{
   position: absolute;
     width: 182px;
     /* background-color: black; */
     height: 53px;
     bottom: -250px;
     right: 163px;
-    border: 1px solid white;*/
+    border: 1px solid white;
 }
 .nextcardbutton{
   position: absolute;
-  background-color: #2D2E2E;
-  right: 161px;
-  bottom: 28px;
-  width: 194px;
-  height: 38px;
-  border: 2px solid black;
-  color: red;
-  font-size: 16px;
+    background-color: #2D2E2E;
+    right: 160px;
+    bottom: 13px;
+    width: 197px;
+    height: 38px;
+    border: 2px solid black;
+    color: red;
+    font-size: 16px;
 }
 .winnerloser{
   visibility: hidden;
   /*border: 1px solid black;*/
     width: 520px;
     height: 400px;
-    position: absolute;
     left: 468px;
     top: 156px;
-    /*//background-color: red;*/
     font-size: 39px;
     background-image: url("../images/giphy (8).gif");
     background-size:100%;
