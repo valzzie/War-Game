@@ -15,20 +15,16 @@ $(document).ready(function(){
   });
 
   $('.nextcardbutton').click(function(){
-
-    seetheCard();
+  seetheCard();
     //draws the card and populates it in one step below.
-    $('#martiansdrawcard').html(myGame.drawTheMartianCard());
-    $('#humansdrawcard').html(myGame.drawTheHumanCard());
+  $('#martiansdrawcard').html(myGame.drawTheMartianCard());
+  $('#humansdrawcard').html(myGame.drawTheHumanCard());
+  updatetheScore();
 
-    // myGame.determineTheMartianScore();
-    // myGame.determineTheHumanScore();
-      updatetheScore();
+  setTimeout(function () {
+  fliptheCard();
+  }, 1000);
 
-      setTimeout(function () {
-        fliptheCard();
-      }, 1000);
-      //I'm not saying this correctly. How do i get the length of an array?  Look it up.
    if(myGame.humanrandomDeck.length <= 0){
    myGame.determineTheWinner();
           updateTheWinner();
@@ -38,31 +34,19 @@ $(document).ready(function(){
       }
 });
 });
-//don't need this function since incorporated it to draw and pop card in one step in jquery above.
-// function populateCard(someCard) {
-//   $('#martiansdrawcard').html(someCard);
-//   //$('#martiansdrawcard').html('this.martiandrawnCard');//populates the humans Card
-//   //$('#humansdrawcard').html('this.humandrawnCard');//populates the martians card
-// }
 
+//functions referred to above are below.
 function seetheCard() {
   // console.log('FRONT CARD');
   $(".martiancard").css('background-image', 'none');
   $(".martiancard").css({'background-image' : 'url("./images/giphy (6).gif")'});
-  //$(".martiancard").css({'background-color': '#054F81' });
-
   $(".humancard").css('background-image', 'none');
-  //$(".humancard").css({ 'background-color': '#054F81' });
   $(".humancard").css({'background-image' : 'url("./images/giphy (6).gif")'});
 }
+
 function updatetheScore() {
-  //can't see the martianScore/humanScore because of the scope of the variable inside the function
-  // console.log(martianScore);
-  // console.log(humanScore);
   $('.martianscore').html(myGame.determineTheMartianScore());
   $('.humanscore').html(myGame.determineTheHumanScore());
-  // $('.martianscore').html(this.martianScore);
-  // $('.humanscore').html(this.humanScore);
 }
 
 function fliptheCard() {
@@ -70,34 +54,17 @@ function fliptheCard() {
 // EMPTY the number
     $('#martiansdrawcard').html(" ");
     $('#humansdrawcard').html(" ");
-//     //flips the card back to the front of deck.
+//flips the card back to the front of deck.
     $(".martiancard").css({ 'background-color': 'none' });
     $('.martiancard').css({'background-image' : 'url("./images/Swampler by Katarzyna Zalecka.jpg")'});
     $(".humancard").css({ 'background-color': 'none' });
     $('.humancard').css({'background-image' : 'url("./images/Swampler by Katarzyna Zalecka.jpg")'});
-
-
-
-
-
-  // $(".martiancard").css({'background-image' : url('../images/Swampler by Katarzyna Zalecka.jpg'});
-  // $('.martiancard').css({'background-image' : 'url("./images/Zabelin.png")'});
-  // $('.martiancard').css({'background-image' : 'url("../images/Swampler by Katarzyna Zalecka.jpg")'});
-// $('.buyButton_new').css('background-image','url(images/compra_mouseOver.png)');
-
-  //$(".humancard").css({ 'background-color': 'none' });
-  // $(".humancard").css('background-image', url('../images/Swampler by Katarzyna Zalecka.jpg'));
-  // $(".martiancard").css({ 'background-color': 'none' });
-  // $(".martiancard").css('background-image', 'url("../images/Swampler by Katarzyna Zalecka.jpg")');
-  // $(".humancard").css({ 'background-color': 'none' });
-  // $(".humancard").css('background-image', 'url("../images/Swampler by Katarzyna Zalecka.jpg")');
 }
 //populates the text depending on whose score is higher.
 function updateTheWinner(){
-
   $('#winnerloser').html(myGame.determineTheWinner());
-  //$('#winnerloser').html(winner);
 }
+
 function showTheWinner() {//shows the div.
   $(".winnerloser").css("visibility","visible");
 }
