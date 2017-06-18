@@ -5,6 +5,13 @@ $(document).ready(function(){
 
   $('.nextcardbutton').hide();
 
+  $('.instructioncontainer').click(function(){
+  $(".instructions").css("visibility","visible");
+  setTimeout(function () {
+  $(".instructions").css("visibility","hidden");
+}, 15000);
+});
+
   $('.startbutton').click(function(){
   $(".winnerloser").css("visibility","hidden");
   myGame = new Game();
@@ -23,7 +30,7 @@ $(document).ready(function(){
 
   setTimeout(function () {
   fliptheCard();
-  }, 1000);
+}, 1000);
 
    if(myGame.humanrandomDeck.length <= 0){
    myGame.determineTheWinner();

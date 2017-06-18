@@ -15,7 +15,7 @@ justify-content: space-around;
 align-items: center;*/
 }
 h1{
-  font-size: 75px;
+  font-size: 103px;
   text-align: center;
 }
 h3{
@@ -24,20 +24,20 @@ h3{
 .martiancontainer{
   display: inline;
     position: absolute;
-    left: 160px;
+    left: 13%;
     /*border: 2px solid white;*/
-    width: 200px;
-    height: 250px;
+    width: 14%;
+    top: 28%;
     text-align: center;
 
 }
 .humancontainer{
   display: inline;
     position: absolute;
-    right: 160px;
+    right: 13%;
     /*border: 2px solid white;*/
-    width: 200px;
-    height: 250px;
+    width: 14%;
+    top: 28%;
     text-align: center;
 }
 .martiancard{
@@ -58,11 +58,10 @@ h3{
 }
 .startcontainer{
   position: absolute;
-    width: 182px;
+    width: 12%;
     /* background-color: black; */
-    height: 53px;
-    bottom: 237px;
-    right: 43%;
+    bottom: -12%;
+    right: 45%;
     /*border: 1px solid black;*/
 }
 .startbutton{
@@ -72,17 +71,30 @@ h3{
     bottom: -125px;
     border: 1px solid white;
 }
+
+.instructioncontainer{
+  position: absolute;
+    width: 12%;
+     background-color: black;
+    top: 10%;
+    left: 1%;
+    /*border: 1px solid black;*/
+}
+.instructionbutton{
+    background-color: black;
+}
+
+
+
 .start{
   color: red;
     font-family: serif;
 }
 .nextcardcontainer{
   position: absolute;
-    width: 182px;
     /* background-color: black; */
-    height: 53px;
-    bottom: 265px;
-    right: 163px;
+    bottom: -6%;
+    right: 13.5%;
     /*border: 1px solid white;*/
 }
 .nextcardbutton{
@@ -99,13 +111,25 @@ h3{
 .winnerloser{
   visibility: hidden;
   /*border: 1px solid black;*/
-    width: 520px;
-    height: 400px;
-    left: 385px;
-    top: 250px;
+    width: 34%;
+    height: 62%;
+    left: 33%;
+    top: 38%;
     font-size: 39px;
     background-image: url("../images/giphy (8).gif");
-    background-size:100%;
+    background-size:96%;
+    position:absolute;
+}
+.instructions{
+  visibility: hidden;
+  /*border: 1px solid black;*/
+    width: 34%;
+    height: 62%;
+    left: 33%;
+    top: 38%;
+    font-size: 39px;
+    background-image: url("../images/zabelin.png");
+    background-size:96%;
     position:absolute;
 
 }
@@ -126,7 +150,7 @@ color:white;
     font-size: 133px;
     position: absolute;
     left: 56px;
-    bottom: -254px;
+    bottom: -55px;
 }
 #humansdrawcard{
   font-family: fantasy;
@@ -134,5 +158,13 @@ color:white;
     font-size: 133px;
     position: absolute;
     right: 63px;
-    bottom: -249px;
+    bottom: -55px;
+}
+p{
+  color:red;
+  font-size: 18px;
+}
+#h4{
+  color: red;
+  text-align: center;
 }
